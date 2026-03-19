@@ -10,9 +10,11 @@ import '../../features/dashboard/screens/dashboard_screen.dart';
 import '../../features/agenda/screens/agenda_screen.dart';
 import '../../features/services/screens/services_screen.dart';
 import '../../features/profile/screens/profile_screen.dart';
+import '../../features/splash/screens/splash_screen.dart';
 import '../../widgets/main_shell.dart';
 
 class AppRoutes {
+  static const splash   = '/';
   static const login    = '/login';
   static const register = '/register';
   static const pending  = '/pending';   // EN_ATTENTE validation
@@ -50,7 +52,7 @@ final routerProvider = Provider<GoRouter>((ref) {
   final notifier = ref.watch(routerNotifierProvider);
 
   return GoRouter(
-    initialLocation: AppRoutes.home,
+    initialLocation: AppRoutes.splash,
     debugLogDiagnostics: true,
     refreshListenable: notifier,
 
@@ -59,10 +61,20 @@ final routerProvider = Provider<GoRouter>((ref) {
       final isAuth    = authState is AuthAuthenticated;
       final isLoading = authState is AuthLoading || authState is AuthInitial;
       final loc       = state.matchedLocation;
+      final isOnSplash  = loc == AppRoutes.splash;
       final isOnAuth  = loc == AppRoutes.login || loc == AppRoutes.register;
       final isOnPending = loc == AppRoutes.pending;
 
-      if (isLoading) return null;
+      if (isLoading) return isOnSplash ? null : AppRoutes.splash;
+
+      // ── Quitter le splash une fois chargé ─────────────────────
+      if (isOnSplash) {
+        if (!isAuth) return AppRoutes.login;
+        final user = (authState as AuthAuthenticated).user;
+        return user.status == UserStatus.EN_ATTENTE
+            ? AppRoutes.pending
+            : AppRoutes.home;
+      }
 
       if (!isAuth && !isOnAuth) return AppRoutes.login;
       if (isAuth  &&  isOnAuth) {
@@ -86,6 +98,12 @@ final routerProvider = Provider<GoRouter>((ref) {
     },
 
     routes: [
+      // ── Splash ──────────────────────────────────────────────────
+      GoRoute(
+        path: AppRoutes.splash,
+        builder: (_, __) => const SplashScreen(),
+      ),
+
       // ── Auth ────────────────────────────────────────────────────
       GoRoute(path: AppRoutes.login,    builder: (_, __) => const LoginScreen()),
       GoRoute(path: AppRoutes.register, builder: (_, __) => const RegisterScreen()),
