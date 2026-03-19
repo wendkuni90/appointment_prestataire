@@ -84,14 +84,12 @@ class PrestataireResponse with _$PrestataireResponse {
     required String businessName,
     required String firstName,
     required String lastName,
-    required String email,
-    required String phone,
+    String? email,
+    String? phone,
     required String status,
-    String? bio,
+    String? description,   // champ réel du backend
     String? photoUrl,
     String? justificatifUrl,
-    String? adresse,
-    String? ville,
     CategoryResponse? category,
     double? rating,
     int?    reviewCount,
@@ -103,10 +101,9 @@ class PrestataireResponse with _$PrestataireResponse {
 class PrestataireProfileRequest with _$PrestataireProfileRequest {
   const factory PrestataireProfileRequest({
     required String businessName,
-    String? bio,
-    String? adresse,
-    String? ville,
+    String? description,   // correspond au champ "description" du backend
     int?    categoryId,
+    String? photoUrl,
   }) = _PrestataireProfileRequest;
   factory PrestataireProfileRequest.fromJson(Map<String, dynamic> json) =>
       _$PrestataireProfileRequestFromJson(json);

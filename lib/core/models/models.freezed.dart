@@ -947,14 +947,13 @@ mixin _$PrestataireResponse {
   String get businessName => throw _privateConstructorUsedError;
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get phone => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
+  String? get description =>
+      throw _privateConstructorUsedError; // champ réel du backend
   String? get photoUrl => throw _privateConstructorUsedError;
   String? get justificatifUrl => throw _privateConstructorUsedError;
-  String? get adresse => throw _privateConstructorUsedError;
-  String? get ville => throw _privateConstructorUsedError;
   CategoryResponse? get category => throw _privateConstructorUsedError;
   double? get rating => throw _privateConstructorUsedError;
   int? get reviewCount => throw _privateConstructorUsedError;
@@ -980,14 +979,12 @@ abstract class $PrestataireResponseCopyWith<$Res> {
       String businessName,
       String firstName,
       String lastName,
-      String email,
-      String phone,
+      String? email,
+      String? phone,
       String status,
-      String? bio,
+      String? description,
       String? photoUrl,
       String? justificatifUrl,
-      String? adresse,
-      String? ville,
       CategoryResponse? category,
       double? rating,
       int? reviewCount});
@@ -1014,14 +1011,12 @@ class _$PrestataireResponseCopyWithImpl<$Res, $Val extends PrestataireResponse>
     Object? businessName = null,
     Object? firstName = null,
     Object? lastName = null,
-    Object? email = null,
-    Object? phone = null,
+    Object? email = freezed,
+    Object? phone = freezed,
     Object? status = null,
-    Object? bio = freezed,
+    Object? description = freezed,
     Object? photoUrl = freezed,
     Object? justificatifUrl = freezed,
-    Object? adresse = freezed,
-    Object? ville = freezed,
     Object? category = freezed,
     Object? rating = freezed,
     Object? reviewCount = freezed,
@@ -1043,21 +1038,21 @@ class _$PrestataireResponseCopyWithImpl<$Res, $Val extends PrestataireResponse>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      phone: null == phone
+              as String?,
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       photoUrl: freezed == photoUrl
           ? _value.photoUrl
@@ -1066,14 +1061,6 @@ class _$PrestataireResponseCopyWithImpl<$Res, $Val extends PrestataireResponse>
       justificatifUrl: freezed == justificatifUrl
           ? _value.justificatifUrl
           : justificatifUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      adresse: freezed == adresse
-          ? _value.adresse
-          : adresse // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ville: freezed == ville
-          ? _value.ville
-          : ville // ignore: cast_nullable_to_non_nullable
               as String?,
       category: freezed == category
           ? _value.category
@@ -1118,14 +1105,12 @@ abstract class _$$PrestataireResponseImplCopyWith<$Res>
       String businessName,
       String firstName,
       String lastName,
-      String email,
-      String phone,
+      String? email,
+      String? phone,
       String status,
-      String? bio,
+      String? description,
       String? photoUrl,
       String? justificatifUrl,
-      String? adresse,
-      String? ville,
       CategoryResponse? category,
       double? rating,
       int? reviewCount});
@@ -1151,14 +1136,12 @@ class __$$PrestataireResponseImplCopyWithImpl<$Res>
     Object? businessName = null,
     Object? firstName = null,
     Object? lastName = null,
-    Object? email = null,
-    Object? phone = null,
+    Object? email = freezed,
+    Object? phone = freezed,
     Object? status = null,
-    Object? bio = freezed,
+    Object? description = freezed,
     Object? photoUrl = freezed,
     Object? justificatifUrl = freezed,
-    Object? adresse = freezed,
-    Object? ville = freezed,
     Object? category = freezed,
     Object? rating = freezed,
     Object? reviewCount = freezed,
@@ -1180,21 +1163,21 @@ class __$$PrestataireResponseImplCopyWithImpl<$Res>
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      phone: null == phone
+              as String?,
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       photoUrl: freezed == photoUrl
           ? _value.photoUrl
@@ -1203,14 +1186,6 @@ class __$$PrestataireResponseImplCopyWithImpl<$Res>
       justificatifUrl: freezed == justificatifUrl
           ? _value.justificatifUrl
           : justificatifUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      adresse: freezed == adresse
-          ? _value.adresse
-          : adresse // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ville: freezed == ville
-          ? _value.ville
-          : ville // ignore: cast_nullable_to_non_nullable
               as String?,
       category: freezed == category
           ? _value.category
@@ -1236,14 +1211,12 @@ class _$PrestataireResponseImpl implements _PrestataireResponse {
       required this.businessName,
       required this.firstName,
       required this.lastName,
-      required this.email,
-      required this.phone,
+      this.email,
+      this.phone,
       required this.status,
-      this.bio,
+      this.description,
       this.photoUrl,
       this.justificatifUrl,
-      this.adresse,
-      this.ville,
       this.category,
       this.rating,
       this.reviewCount});
@@ -1260,21 +1233,18 @@ class _$PrestataireResponseImpl implements _PrestataireResponse {
   @override
   final String lastName;
   @override
-  final String email;
+  final String? email;
   @override
-  final String phone;
+  final String? phone;
   @override
   final String status;
   @override
-  final String? bio;
+  final String? description;
+// champ réel du backend
   @override
   final String? photoUrl;
   @override
   final String? justificatifUrl;
-  @override
-  final String? adresse;
-  @override
-  final String? ville;
   @override
   final CategoryResponse? category;
   @override
@@ -1284,7 +1254,7 @@ class _$PrestataireResponseImpl implements _PrestataireResponse {
 
   @override
   String toString() {
-    return 'PrestataireResponse(id: $id, businessName: $businessName, firstName: $firstName, lastName: $lastName, email: $email, phone: $phone, status: $status, bio: $bio, photoUrl: $photoUrl, justificatifUrl: $justificatifUrl, adresse: $adresse, ville: $ville, category: $category, rating: $rating, reviewCount: $reviewCount)';
+    return 'PrestataireResponse(id: $id, businessName: $businessName, firstName: $firstName, lastName: $lastName, email: $email, phone: $phone, status: $status, description: $description, photoUrl: $photoUrl, justificatifUrl: $justificatifUrl, category: $category, rating: $rating, reviewCount: $reviewCount)';
   }
 
   @override
@@ -1302,13 +1272,12 @@ class _$PrestataireResponseImpl implements _PrestataireResponse {
             (identical(other.email, email) || other.email == email) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.bio, bio) || other.bio == bio) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.photoUrl, photoUrl) ||
                 other.photoUrl == photoUrl) &&
             (identical(other.justificatifUrl, justificatifUrl) ||
                 other.justificatifUrl == justificatifUrl) &&
-            (identical(other.adresse, adresse) || other.adresse == adresse) &&
-            (identical(other.ville, ville) || other.ville == ville) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.rating, rating) || other.rating == rating) &&
@@ -1327,11 +1296,9 @@ class _$PrestataireResponseImpl implements _PrestataireResponse {
       email,
       phone,
       status,
-      bio,
+      description,
       photoUrl,
       justificatifUrl,
-      adresse,
-      ville,
       category,
       rating,
       reviewCount);
@@ -1359,14 +1326,12 @@ abstract class _PrestataireResponse implements PrestataireResponse {
       required final String businessName,
       required final String firstName,
       required final String lastName,
-      required final String email,
-      required final String phone,
+      final String? email,
+      final String? phone,
       required final String status,
-      final String? bio,
+      final String? description,
       final String? photoUrl,
       final String? justificatifUrl,
-      final String? adresse,
-      final String? ville,
       final CategoryResponse? category,
       final double? rating,
       final int? reviewCount}) = _$PrestataireResponseImpl;
@@ -1383,21 +1348,17 @@ abstract class _PrestataireResponse implements PrestataireResponse {
   @override
   String get lastName;
   @override
-  String get email;
+  String? get email;
   @override
-  String get phone;
+  String? get phone;
   @override
   String get status;
   @override
-  String? get bio;
+  String? get description; // champ réel du backend
   @override
   String? get photoUrl;
   @override
   String? get justificatifUrl;
-  @override
-  String? get adresse;
-  @override
-  String? get ville;
   @override
   CategoryResponse? get category;
   @override
@@ -1421,10 +1382,10 @@ PrestataireProfileRequest _$PrestataireProfileRequestFromJson(
 /// @nodoc
 mixin _$PrestataireProfileRequest {
   String get businessName => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
-  String? get adresse => throw _privateConstructorUsedError;
-  String? get ville => throw _privateConstructorUsedError;
+  String? get description =>
+      throw _privateConstructorUsedError; // correspond au champ "description" du backend
   int? get categoryId => throw _privateConstructorUsedError;
+  String? get photoUrl => throw _privateConstructorUsedError;
 
   /// Serializes this PrestataireProfileRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1444,10 +1405,9 @@ abstract class $PrestataireProfileRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {String businessName,
-      String? bio,
-      String? adresse,
-      String? ville,
-      int? categoryId});
+      String? description,
+      int? categoryId,
+      String? photoUrl});
 }
 
 /// @nodoc
@@ -1467,32 +1427,27 @@ class _$PrestataireProfileRequestCopyWithImpl<$Res,
   @override
   $Res call({
     Object? businessName = null,
-    Object? bio = freezed,
-    Object? adresse = freezed,
-    Object? ville = freezed,
+    Object? description = freezed,
     Object? categoryId = freezed,
+    Object? photoUrl = freezed,
   }) {
     return _then(_value.copyWith(
       businessName: null == businessName
           ? _value.businessName
           : businessName // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      adresse: freezed == adresse
-          ? _value.adresse
-          : adresse // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ville: freezed == ville
-          ? _value.ville
-          : ville // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       categoryId: freezed == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      photoUrl: freezed == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1508,10 +1463,9 @@ abstract class _$$PrestataireProfileRequestImplCopyWith<$Res>
   @useResult
   $Res call(
       {String businessName,
-      String? bio,
-      String? adresse,
-      String? ville,
-      int? categoryId});
+      String? description,
+      int? categoryId,
+      String? photoUrl});
 }
 
 /// @nodoc
@@ -1530,32 +1484,27 @@ class __$$PrestataireProfileRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? businessName = null,
-    Object? bio = freezed,
-    Object? adresse = freezed,
-    Object? ville = freezed,
+    Object? description = freezed,
     Object? categoryId = freezed,
+    Object? photoUrl = freezed,
   }) {
     return _then(_$PrestataireProfileRequestImpl(
       businessName: null == businessName
           ? _value.businessName
           : businessName // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      adresse: freezed == adresse
-          ? _value.adresse
-          : adresse // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ville: freezed == ville
-          ? _value.ville
-          : ville // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
       categoryId: freezed == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      photoUrl: freezed == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1565,10 +1514,9 @@ class __$$PrestataireProfileRequestImplCopyWithImpl<$Res>
 class _$PrestataireProfileRequestImpl implements _PrestataireProfileRequest {
   const _$PrestataireProfileRequestImpl(
       {required this.businessName,
-      this.bio,
-      this.adresse,
-      this.ville,
-      this.categoryId});
+      this.description,
+      this.categoryId,
+      this.photoUrl});
 
   factory _$PrestataireProfileRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$PrestataireProfileRequestImplFromJson(json);
@@ -1576,17 +1524,16 @@ class _$PrestataireProfileRequestImpl implements _PrestataireProfileRequest {
   @override
   final String businessName;
   @override
-  final String? bio;
-  @override
-  final String? adresse;
-  @override
-  final String? ville;
+  final String? description;
+// correspond au champ "description" du backend
   @override
   final int? categoryId;
+  @override
+  final String? photoUrl;
 
   @override
   String toString() {
-    return 'PrestataireProfileRequest(businessName: $businessName, bio: $bio, adresse: $adresse, ville: $ville, categoryId: $categoryId)';
+    return 'PrestataireProfileRequest(businessName: $businessName, description: $description, categoryId: $categoryId, photoUrl: $photoUrl)';
   }
 
   @override
@@ -1596,17 +1543,18 @@ class _$PrestataireProfileRequestImpl implements _PrestataireProfileRequest {
             other is _$PrestataireProfileRequestImpl &&
             (identical(other.businessName, businessName) ||
                 other.businessName == businessName) &&
-            (identical(other.bio, bio) || other.bio == bio) &&
-            (identical(other.adresse, adresse) || other.adresse == adresse) &&
-            (identical(other.ville, ville) || other.ville == ville) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.categoryId, categoryId) ||
-                other.categoryId == categoryId));
+                other.categoryId == categoryId) &&
+            (identical(other.photoUrl, photoUrl) ||
+                other.photoUrl == photoUrl));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, businessName, bio, adresse, ville, categoryId);
+      Object.hash(runtimeType, businessName, description, categoryId, photoUrl);
 
   /// Create a copy of PrestataireProfileRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -1628,10 +1576,9 @@ class _$PrestataireProfileRequestImpl implements _PrestataireProfileRequest {
 abstract class _PrestataireProfileRequest implements PrestataireProfileRequest {
   const factory _PrestataireProfileRequest(
       {required final String businessName,
-      final String? bio,
-      final String? adresse,
-      final String? ville,
-      final int? categoryId}) = _$PrestataireProfileRequestImpl;
+      final String? description,
+      final int? categoryId,
+      final String? photoUrl}) = _$PrestataireProfileRequestImpl;
 
   factory _PrestataireProfileRequest.fromJson(Map<String, dynamic> json) =
       _$PrestataireProfileRequestImpl.fromJson;
@@ -1639,13 +1586,11 @@ abstract class _PrestataireProfileRequest implements PrestataireProfileRequest {
   @override
   String get businessName;
   @override
-  String? get bio;
-  @override
-  String? get adresse;
-  @override
-  String? get ville;
+  String? get description; // correspond au champ "description" du backend
   @override
   int? get categoryId;
+  @override
+  String? get photoUrl;
 
   /// Create a copy of PrestataireProfileRequest
   /// with the given fields replaced by the non-null parameter values.

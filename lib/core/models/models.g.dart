@@ -100,14 +100,12 @@ _$PrestataireResponseImpl _$$PrestataireResponseImplFromJson(
       businessName: json['businessName'] as String,
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
-      email: json['email'] as String,
-      phone: json['phone'] as String,
+      email: json['email'] as String?,
+      phone: json['phone'] as String?,
       status: json['status'] as String,
-      bio: json['bio'] as String?,
+      description: json['description'] as String?,
       photoUrl: json['photoUrl'] as String?,
       justificatifUrl: json['justificatifUrl'] as String?,
-      adresse: json['adresse'] as String?,
-      ville: json['ville'] as String?,
       category: json['category'] == null
           ? null
           : CategoryResponse.fromJson(json['category'] as Map<String, dynamic>),
@@ -125,11 +123,9 @@ Map<String, dynamic> _$$PrestataireResponseImplToJson(
       'email': instance.email,
       'phone': instance.phone,
       'status': instance.status,
-      'bio': instance.bio,
+      'description': instance.description,
       'photoUrl': instance.photoUrl,
       'justificatifUrl': instance.justificatifUrl,
-      'adresse': instance.adresse,
-      'ville': instance.ville,
       'category': instance.category,
       'rating': instance.rating,
       'reviewCount': instance.reviewCount,
@@ -139,20 +135,18 @@ _$PrestataireProfileRequestImpl _$$PrestataireProfileRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$PrestataireProfileRequestImpl(
       businessName: json['businessName'] as String,
-      bio: json['bio'] as String?,
-      adresse: json['adresse'] as String?,
-      ville: json['ville'] as String?,
+      description: json['description'] as String?,
       categoryId: (json['categoryId'] as num?)?.toInt(),
+      photoUrl: json['photoUrl'] as String?,
     );
 
 Map<String, dynamic> _$$PrestataireProfileRequestImplToJson(
         _$PrestataireProfileRequestImpl instance) =>
     <String, dynamic>{
       'businessName': instance.businessName,
-      'bio': instance.bio,
-      'adresse': instance.adresse,
-      'ville': instance.ville,
+      'description': instance.description,
       'categoryId': instance.categoryId,
+      'photoUrl': instance.photoUrl,
     };
 
 _$ServiceResponseImpl _$$ServiceResponseImplFromJson(
