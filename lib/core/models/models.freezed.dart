@@ -733,6 +733,315 @@ abstract class _RegisterRequest implements RegisterRequest {
       throw _privateConstructorUsedError;
 }
 
+RegisterPrestataireRequest _$RegisterPrestataireRequestFromJson(
+    Map<String, dynamic> json) {
+  return _RegisterPrestataireRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$RegisterPrestataireRequest {
+  String get firstName => throw _privateConstructorUsedError;
+  String get lastName => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
+  String get businessName => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  int get categoryId => throw _privateConstructorUsedError;
+
+  /// Serializes this RegisterPrestataireRequest to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of RegisterPrestataireRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RegisterPrestataireRequestCopyWith<RegisterPrestataireRequest>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RegisterPrestataireRequestCopyWith<$Res> {
+  factory $RegisterPrestataireRequestCopyWith(RegisterPrestataireRequest value,
+          $Res Function(RegisterPrestataireRequest) then) =
+      _$RegisterPrestataireRequestCopyWithImpl<$Res,
+          RegisterPrestataireRequest>;
+  @useResult
+  $Res call(
+      {String firstName,
+      String lastName,
+      String email,
+      String password,
+      String phone,
+      String businessName,
+      String description,
+      int categoryId});
+}
+
+/// @nodoc
+class _$RegisterPrestataireRequestCopyWithImpl<$Res,
+        $Val extends RegisterPrestataireRequest>
+    implements $RegisterPrestataireRequestCopyWith<$Res> {
+  _$RegisterPrestataireRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of RegisterPrestataireRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? email = null,
+    Object? password = null,
+    Object? phone = null,
+    Object? businessName = null,
+    Object? description = null,
+    Object? categoryId = null,
+  }) {
+    return _then(_value.copyWith(
+      firstName: null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      phone: null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
+      businessName: null == businessName
+          ? _value.businessName
+          : businessName // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$RegisterPrestataireRequestImplCopyWith<$Res>
+    implements $RegisterPrestataireRequestCopyWith<$Res> {
+  factory _$$RegisterPrestataireRequestImplCopyWith(
+          _$RegisterPrestataireRequestImpl value,
+          $Res Function(_$RegisterPrestataireRequestImpl) then) =
+      __$$RegisterPrestataireRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String firstName,
+      String lastName,
+      String email,
+      String password,
+      String phone,
+      String businessName,
+      String description,
+      int categoryId});
+}
+
+/// @nodoc
+class __$$RegisterPrestataireRequestImplCopyWithImpl<$Res>
+    extends _$RegisterPrestataireRequestCopyWithImpl<$Res,
+        _$RegisterPrestataireRequestImpl>
+    implements _$$RegisterPrestataireRequestImplCopyWith<$Res> {
+  __$$RegisterPrestataireRequestImplCopyWithImpl(
+      _$RegisterPrestataireRequestImpl _value,
+      $Res Function(_$RegisterPrestataireRequestImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegisterPrestataireRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? email = null,
+    Object? password = null,
+    Object? phone = null,
+    Object? businessName = null,
+    Object? description = null,
+    Object? categoryId = null,
+  }) {
+    return _then(_$RegisterPrestataireRequestImpl(
+      firstName: null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      phone: null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
+      businessName: null == businessName
+          ? _value.businessName
+          : businessName // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$RegisterPrestataireRequestImpl implements _RegisterPrestataireRequest {
+  const _$RegisterPrestataireRequestImpl(
+      {required this.firstName,
+      required this.lastName,
+      required this.email,
+      required this.password,
+      required this.phone,
+      required this.businessName,
+      required this.description,
+      required this.categoryId});
+
+  factory _$RegisterPrestataireRequestImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$RegisterPrestataireRequestImplFromJson(json);
+
+  @override
+  final String firstName;
+  @override
+  final String lastName;
+  @override
+  final String email;
+  @override
+  final String password;
+  @override
+  final String phone;
+  @override
+  final String businessName;
+  @override
+  final String description;
+  @override
+  final int categoryId;
+
+  @override
+  String toString() {
+    return 'RegisterPrestataireRequest(firstName: $firstName, lastName: $lastName, email: $email, password: $password, phone: $phone, businessName: $businessName, description: $description, categoryId: $categoryId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RegisterPrestataireRequestImpl &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.businessName, businessName) ||
+                other.businessName == businessName) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.categoryId, categoryId) ||
+                other.categoryId == categoryId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, firstName, lastName, email,
+      password, phone, businessName, description, categoryId);
+
+  /// Create a copy of RegisterPrestataireRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RegisterPrestataireRequestImplCopyWith<_$RegisterPrestataireRequestImpl>
+      get copyWith => __$$RegisterPrestataireRequestImplCopyWithImpl<
+          _$RegisterPrestataireRequestImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$RegisterPrestataireRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _RegisterPrestataireRequest
+    implements RegisterPrestataireRequest {
+  const factory _RegisterPrestataireRequest(
+      {required final String firstName,
+      required final String lastName,
+      required final String email,
+      required final String password,
+      required final String phone,
+      required final String businessName,
+      required final String description,
+      required final int categoryId}) = _$RegisterPrestataireRequestImpl;
+
+  factory _RegisterPrestataireRequest.fromJson(Map<String, dynamic> json) =
+      _$RegisterPrestataireRequestImpl.fromJson;
+
+  @override
+  String get firstName;
+  @override
+  String get lastName;
+  @override
+  String get email;
+  @override
+  String get password;
+  @override
+  String get phone;
+  @override
+  String get businessName;
+  @override
+  String get description;
+  @override
+  int get categoryId;
+
+  /// Create a copy of RegisterPrestataireRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RegisterPrestataireRequestImplCopyWith<_$RegisterPrestataireRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 CategoryResponse _$CategoryResponseFromJson(Map<String, dynamic> json) {
   return _CategoryResponse.fromJson(json);
 }

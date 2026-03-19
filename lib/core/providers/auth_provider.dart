@@ -75,22 +75,28 @@ class Auth extends _$Auth {
     required String email,
     required String password,
     required String phone,
+    required String businessName,
+    required String description,
+    required int    categoryId,
   }) async {
     state = AuthLoading();
     try {
       final res = await _dio.post(
-        ApiConstants.register,
-        data: RegisterRequest(
-          firstName: firstName,
-          lastName:  lastName,
-          email:     email,
-          password:  password,
-          phone:     phone,
+        ApiConstants.registerPrestataire,   // ← nouvelle route
+        data: RegisterPrestataireRequest(
+          firstName:    firstName,
+          lastName:     lastName,
+          email:        email,
+          password:     password,
+          phone:        phone,
+          businessName: businessName,
+          description:  description,
+          categoryId:   categoryId,
         ).toJson(),
       );
       state = AuthAuthenticated(User.fromJson(res.data));
     } on DioException catch (e) {
-      final msg = e.response?.data?['message'] ?? 'Erreur lors de l\'inscription';
+      final msg = e.response?.data?['message'] ?? "Erreur lors de l'inscription";
       state = AuthError(msg);
     }
   }

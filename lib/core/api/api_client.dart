@@ -15,6 +15,7 @@ class ApiConstants {
   static const register = '/auth/register'; // POST — permitAll
   static const me       = '/auth/me';       // GET  — authenticated
   static const logout   = '/auth/logout';   // POST — authenticated
+  static const registerPrestataire = '/auth/register/prestataire'; // POST — permitAll
 
   // ── Compte — /api/account ─────────────────────────────────────────────
   static const changePassword = '/account/password'; // PATCH

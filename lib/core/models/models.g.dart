@@ -75,6 +75,32 @@ Map<String, dynamic> _$$RegisterRequestImplToJson(
       'role': instance.role,
     };
 
+_$RegisterPrestataireRequestImpl _$$RegisterPrestataireRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RegisterPrestataireRequestImpl(
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
+      email: json['email'] as String,
+      password: json['password'] as String,
+      phone: json['phone'] as String,
+      businessName: json['businessName'] as String,
+      description: json['description'] as String,
+      categoryId: (json['categoryId'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$$RegisterPrestataireRequestImplToJson(
+        _$RegisterPrestataireRequestImpl instance) =>
+    <String, dynamic>{
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'email': instance.email,
+      'password': instance.password,
+      'phone': instance.phone,
+      'businessName': instance.businessName,
+      'description': instance.description,
+      'categoryId': instance.categoryId,
+    };
+
 _$CategoryResponseImpl _$$CategoryResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$CategoryResponseImpl(

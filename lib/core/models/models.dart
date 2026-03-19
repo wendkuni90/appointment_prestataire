@@ -6,9 +6,17 @@ part 'models.g.dart';
 // ══════════════════════════════════════════════════════════════════════════════
 // ENUMS
 // ══════════════════════════════════════════════════════════════════════════════
+enum UserRole {
+  @JsonValue('ADMIN')       ADMIN,
+  @JsonValue('CLIENT')      CLIENT,
+  @JsonValue('PRESTATAIRE') PRESTATAIRE,
+}
 
-enum UserRole   { ADMIN, CLIENT, PRESTATAIRE }
-enum UserStatus { ACTIF, EN_ATTENTE, SUSPENDU }
+enum UserStatus {
+  @JsonValue('ACTIF')       ACTIF,
+  @JsonValue('EN_ATTENTE')  EN_ATTENTE,
+  @JsonValue('SUSPENDU')    SUSPENDU,
+}
 
 enum AppointmentStatus {
   EN_ATTENTE,
@@ -60,6 +68,22 @@ class RegisterRequest with _$RegisterRequest {
     @Default('PRESTATAIRE') String role,
   }) = _RegisterRequest;
   factory RegisterRequest.fromJson(Map<String, dynamic> json) => _$RegisterRequestFromJson(json);
+}
+
+@freezed
+class RegisterPrestataireRequest with _$RegisterPrestataireRequest {
+  const factory RegisterPrestataireRequest({
+    required String firstName,
+    required String lastName,
+    required String email,
+    required String password,
+    required String phone,
+    required String businessName,
+    required String description,
+    required int    categoryId,
+  }) = _RegisterPrestataireRequest;
+  factory RegisterPrestataireRequest.fromJson(Map<String, dynamic> json) =>
+      _$RegisterPrestataireRequestFromJson(json);
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
