@@ -1,0 +1,68 @@
+name: appointment_prestataire
+description: Application mobile pour les prestataires — gestion des rendez-vous.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Navigation ─────────────────────────────────────────────────────────────
+  go_router: ^13.2.0
+
+  # ── State management ───────────────────────────────────────────────────────
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # ── HTTP & API ─────────────────────────────────────────────────────────────
+  dio: ^5.4.3+1
+  cookie_jar: ^4.0.8
+  dio_cookie_manager: ^3.1.1
+
+  # ── Stockage sécurisé ──────────────────────────────────────────────────────
+  flutter_secure_storage: ^9.0.0
+
+  # ── UI ─────────────────────────────────────────────────────────────────────
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  image_picker: ^1.1.1       # upload photo + justificatif
+  flutter_svg: ^2.0.10+1
+
+  # ── Utilitaires ────────────────────────────────────────────────────────────
+  intl: ^0.19.0
+  equatable: ^2.0.5
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.4.0
+  freezed: ^2.5.2
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: DMSerifDisplay
+      fonts:
+        - asset: assets/fonts/DMSerifDisplay-Regular.ttf
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/DMSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/DMSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/DMSans-Bold.ttf
+          weight: 700
