@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class ApiConstants {
   ApiConstants._();
 
-  static const baseUrl = 'http://192.168.11.103:8080/api';
+  static const baseUrl = 'http://192.168.137.6:8080/api';
   // iOS simulateur → 'http://localhost:8080/api'
   // Device physique → 'http://<IP_machine>:8080/api'
 
